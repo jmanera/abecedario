@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Abecedario</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="claro">
+<div id="app">
+  <header id="top">
+    <button class="btn icon" id="bMenu" aria-label="Menú"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <div class="brand">
+      <h1>Abecedario</h1>
+      <div class="sub" id="hSub"></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="sOk">0</b><span>Aciertos</span></div>
+      <div class="stat"><b id="sBad">0</b><span>Fallos</span></div>
+    </div>
+    <nav class="tools">
+      <button class="btn" id="bPause" aria-label="Pausa"><svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg><span>Pausa</span></button>
+      <button class="btn" id="bNew" aria-label="Nuevo"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>Nuevo</span></button>
+    </nav>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <div id="ringWrap"><div id="ring"><div id="hub"><div class="clock" id="clock">3:00</div><div class="score" id="score"></div></div></div></div>
+      <div id="pauseCover"><div><h2>En pausa</h2><button class="btn primary" id="bResume">Continuar</button></div></div>
+    </div>
+    <aside id="side">
+      <div id="card">
+        <div class="rule" id="rule"></div>
+        <div id="def"></div>
+        <div id="reveal"></div>
+        <div id="answer"></div>
+        <div class="actions" id="actions"></div>
+      </div>
+      <div id="kbd"></div>
+    </aside>
+  </div>
+</div>
+<div id="modal"><div id="sheet" role="dialog" aria-modal="true"></div></div>
+<div id="toast" role="status"></div>
+<script src="banco.js"></script>
+<script src="gen.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
