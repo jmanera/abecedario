@@ -5,7 +5,13 @@ con la Ñ. La respuesta empieza por esa letra o, cuando se indica, la contiene. 
 (`app/assets/`) envuelta en una app Android mínima con un WebView a pantalla completa. Funciona sin
 conexión.
 
-## Instalar en la tablet
+## Descargar
+
+La última versión firmada está en [Releases](https://github.com/jmanera/abecedario/releases/latest): descarga `Abecedario.apk` y ábrelo
+en la tablet (la primera vez hay que permitir instalar aplicaciones de origen desconocido), o
+instálalo con `adb install -r Abecedario.apk`.
+
+## Compilar e instalar desde el código
 
 Con la tablet conectada por USB y la depuración USB activada:
 
@@ -60,3 +66,22 @@ python3 -m http.server 8768 -d app/assets
 
 Y abrir `http://localhost:8768`. Con teclado físico: escribir, Intro para responder y para enviar,
 Tab para pasar, Esc para pausar.
+
+## Publicar una versión
+
+El workflow [Publicar APK](.github/workflows/release.yml) compila el APK firmado y crea una release
+nueva (`v1.N`). Solo se lanza a mano, desde *Actions > Publicar APK > Run workflow*, y solo lo puede
+ejecutar el dueño del repositorio. Firma con la misma clave que `release.keystore`, guardada en el
+secreto `KEYSTORE_BASE64` (el fichero en base64):
+
+```bash
+base64 -w0 release.keystore | gh secret set KEYSTORE_BASE64
+```
+
+## Otros juegos
+
+Hechos de la misma forma, para la misma tablet:
+
+- [Mahjong solitario](https://github.com/jmanera/mahjong-solitario): emparejar fichas, con 12 tableros.
+- [Autodefinidos](https://github.com/jmanera/autodefinidos): crucigramas con las definiciones dentro de la cuadrícula.
+- [Sopa de letras](https://github.com/jmanera/sopa-de-letras): sopas de letras por temas.
