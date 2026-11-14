@@ -24,12 +24,18 @@ estadísticas ni la partida guardada) hay que firmar siempre con la misma clave.
 - Banco propio de 517 definiciones (entre 14 y 24 por letra), pensado para toda la familia.
 - Rueda con las 27 letras: azul pendiente, verde acierto, rojo fallo; la actual, en amarillo.
 - Teclado en pantalla con Ñ. Las tildes no importan al responder.
+- Al pulsar «Responder» (o empezar a escribir) se para el reloj principal y empieza una cuenta
+  atrás para escribir la respuesta: 30 segundos por defecto (15, 20, 30, 45, 60 o sin límite). Si
+  se acaba, cuenta como fallo.
 - «Paso» deja la letra para la siguiente vuelta. Al fallar se ve la respuesta y el reloj se para.
-- Tiempo de 2, 3, 4 o 5 minutos, o sin límite. Se puede plantar desde el menú.
+- Tiempo de 2, 3, 4 o 5 minutos por jugador, o sin límite. Se puede plantar desde el menú.
+- En solitario o de 2 a 4 jugadores por turnos en la misma tablet, cada uno con su abecedario, su
+  nombre y su reloj. Se sigue mientras se acierta; al fallar o pasar le toca al siguiente, cuyo reloj
+  no corre hasta que pulsa «Empezar turno». Gana quien más acierta (con empate, quien menos falla).
 - Al terminar, todas las respuestas con su definición y lo que se contestó en los fallos.
 - Abecedario del día con racha; partida por número; en los demás se evitan las respuestas
   que han salido en las últimas partidas.
-- Estadísticas: jugados, mejor marca, media de aciertos y abecedarios completos.
+- Estadísticas en solitario: jugados, mejor marca, media de aciertos y completos; y partidas a varios.
 - Temas claro y oscuro; opción de mostrar el número de letras.
 - La partida se guarda sola y se recupera en pausa. El botón atrás de Android pausa la partida.
 
@@ -52,5 +58,5 @@ por la letra y `C` si solo la contiene. Las formas alternativas que se aceptan v
 python3 -m http.server 8768 -d app/assets
 ```
 
-Y abrir `http://localhost:8768`. Con teclado físico: escribir, Intro para responder (vacío, para
-pasar), Esc para pausar.
+Y abrir `http://localhost:8768`. Con teclado físico: escribir, Intro para responder y para enviar,
+Tab para pasar, Esc para pausar.
