@@ -86,3 +86,4 @@ Hechos de la misma forma, para la misma tablet:
 - [Autodefinidos](https://github.com/jmanera/autodefinidos): crucigramas con las definiciones dentro de la cuadrícula.
 - [Sopa de letras](https://github.com/jmanera/sopa-de-letras): sopas de letras por temas.
 - [Zampabolas](https://github.com/jmanera/zampabolas): juego de laberinto con varios mundos (clásico, Navidad, bosque, carreras) y personajes.
+- [Encaja](https://github.com/jmanera/encaja): piezas que caen y encajan, con seis modos y cuatro temas.
